@@ -27,3 +27,23 @@ yarn add ts-node-dev -D
 }
 
 ## Aula 02
+
+#### Utilizando TypeORM como ORM e SQLite como banco
+
+#### typeorm.io
+
+yarn add typeorm reflect-metadata sqlite3
+
+// Criando migrations
+
+yarn typeorm migration:create -n CreatUsers
+
+yarn typeorm migration:run
+
+yarn typeorm migration:revert // remove a ultima migration
+
+yarn typeorm entity:create -n User
+
+yarn add uuid
+
+yarn add @types/uuid
