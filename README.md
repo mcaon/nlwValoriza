@@ -47,3 +47,40 @@ yarn typeorm entity:create -n User
 yarn add uuid
 
 yarn add @types/uuid
+
+
+## Aula 03
+
+yarn add express-async-errors
+
+yarn typeorm migration:create -n CreateTags
+
+yarn typeorm migration:run
+
+// site => developer.mozilla.org para verificar os status (ex: 400, 401, 500....)
+
+
+
+# Regras
+
+- Cadastro de Usuário
+  
+    [x] Não é permitido cadastrar mais de um usuário com mesmo e-mail
+    
+    [x] Não é permitido cadastrar usuário sem e-mail
+
+- Cadastro de TAGS
+
+    [x] Não é permitido cadastrar mais de uma tag com o mesmo nome
+
+    [x] Não é permitido cadastrar tag sem nome
+
+    [x] Não é permitido o cadastro por usuários que não sejam admin
+
+- Cadastro de elogios
+
+    [ ] Não é permitido um usuário cadastrar um elogio para sí
+  
+    [ ] Não é permitido cadastrar elogios para usuários inválidos
+
+    [ ] O usuário precisa estar autenticado na aplicação

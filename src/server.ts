@@ -1,7 +1,8 @@
-import "reflect-metadata";
-import express from "express";
-import {router} from "./routes"
-import "./database";
+import 'reflect-metadata';
+import express, {NextFunction, Request, Response} from 'express';
+import "express-async-errors";
+import {router} from './routes'
+import './database';
 
 // @types/express
 const app = express();
@@ -9,12 +10,25 @@ const app = express();
 app.use(express.json());
 app.use(router);
 
+// middleware tratamento de erros com 4 parametros
+app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
+    if (err instanceof Error) {
+        return response.status(400).json({
+                error: err.message
+        });
+    }
+    return response.status(500).json({
+        status: "error",
+        message: "Internal server error"
+    })
+})
+
 /**
-*  GET    => Buscar uma informação
-*  POST   => Inserir/Criar uma informação
-*  PUT    => Alterar uma informação (ex. usuário já existente)
-*  DELETE => Remover um dado
-*  PATCH  => Alterar uma informação específica (ex. senha de usuario)
+ *  GET    => Buscar uma informação
+ *  POST   => Inserir/Criar uma informação
+ *  PUT    => Alterar uma informação (ex. usuário já existente)
+ *  DELETE => Remover um dado
+ *  PATCH  => Alterar uma informação específica (ex. senha de usuario)
  **/
 
 /**
