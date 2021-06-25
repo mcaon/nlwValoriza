@@ -1,5 +1,5 @@
-import {Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn, JoinColumn, ManyToOne} from 'typeorm';
-import { v4 as uuid } from "uuid";
+import {Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryColumn} from 'typeorm';
+import {v4 as uuid} from 'uuid';
 import {Tag} from './Tag';
 import {User} from './User';
 

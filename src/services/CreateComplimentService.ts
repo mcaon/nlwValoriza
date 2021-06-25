@@ -36,7 +36,6 @@ class CreateComplimentService {
         await complimentsRepository.save(compliment);
 
         return compliment;
-
     }
 }
 

@@ -78,6 +78,12 @@ Procurar => md5 generator para criar uma chave hash para o TOKEN
 
 yarn typeorm migration:create -n CreateCompliments
 
+
+## Aula 05
+
+yarn add class-transformer
+
+
 # Regras
 
 - Cadastro de Usuário
@@ -96,8 +102,8 @@ yarn typeorm migration:create -n CreateCompliments
 
 - Cadastro de elogios
 
-    [ ] Não é permitido um usuário cadastrar um elogio para sí
+    [x] Não é permitido um usuário cadastrar um elogio para sí
   
-    [ ] Não é permitido cadastrar elogios para usuários inválidos
+    [x] Não é permitido cadastrar elogios para usuários inválidos
 
-    [ ] O usuário precisa estar autenticado na aplicação
+    [x] O usuário precisa estar autenticado na aplicação
