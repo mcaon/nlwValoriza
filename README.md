@@ -83,7 +83,9 @@ yarn typeorm migration:create -n CreateCompliments
 
 yarn add class-transformer
 
+yarn add cors
 
+yarn add @types/cors
 # Regras
 
 - Cadastro de Usuário
