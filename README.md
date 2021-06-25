@@ -60,6 +60,23 @@ yarn typeorm migration:run
 // site => developer.mozilla.org para verificar os status (ex: 400, 401, 500....)
 
 
+## Aula 04
+
+yarn add jsonwebtoken
+
+yarn add @types/jsonwebtoken -D
+
+yarn typeorm migration:create -n AlterUserAddPassword
+
+yarn typeorm migration:run
+
+yarn add bcryptjs
+
+yarn add @types/bcryptjs -D
+
+Procurar => md5 generator para criar uma chave hash para o TOKEN
+
+yarn typeorm migration:create -n CreateCompliments
 
 # Regras
 
